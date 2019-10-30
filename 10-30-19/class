@@ -1,1 +1,38 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="demostyles.css">
+</head>
+<body>
+	<div class="p-div">
+		<h1 class="txt-center">This is My Blog</h1>
+		<div>
+			<h3>First Aricle : Dogs</h3>
+			<span><em>Date:10-25-19</em></span>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div class="img-div">
+				<img class="img-styles" src="dog1.jpg">
+				<img class="img-styles" src="dog2.jpg">
+				<img class="img-styles" src="dog3.jpg">
+			</div>
+		</div>
+		<hr/>
+		<div>
+			<h3>Second Aricle : Cats</h3>
+			<span><em>Date:10-30-19</em></span>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div class="img-div">
+				<img class="img-styles" src="cat1.jpg">
+				<img class="img-styles" src="cat2.jpg">
+				<img class="img-styles" src="cat3.jpg">
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
