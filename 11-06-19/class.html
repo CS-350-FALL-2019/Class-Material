@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#div-container{
+			border: 1px solid black;
+			width: 70%;
+			padding: 10px;
+			text-align: center;
+			margin: auto;
+			background-color: antiquewhite;
+			font-weight: 500;
+		}
+		#div-msg{
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+			margin: 10px;
+			display:none;
+			background-color: blue;
+			color: white;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="div-container">
+		<div id="div-form">
+			
+		<label for="userName">UserName: </label>
+		<input type="text" id="userName">
+		<br>
+		<p>Select your age group from the below options: </p>
+		<input type="radio" name="age" value="below 30" id="age_25">
+		<label for="age_25">25 to 30</label>
+		<input type="radio" name="age" value="above 30" id="age_30">
+		<label for="age_30">30 to 35</label>
+		<br>
+		<br>
+		<label for="stateSelect">Select your State: </label>
+		<select  id="stateSelect" name="state">
+			<option value="Arizona">Arizona</option>
+			<option value="California">California</option>
+			<option value="New Mexico">New Mexico</option>
+		</select>
+		<br>
+		<br>
+		<button onclick="printDetails()" id="submit">Submit</button>
+			
+		
+	</div>
+	<div id="div-msg">
+		<ol id="message">
+	</div>
+	</div>
+	
+		
+<script type="text/javascript">
+
+		function printDetails() {
+			document.getElementById("div-msg").style.display = "block";
+			var name=document.getElementById('userName').value;
+			var message=document.getElementById('message');
+			var age=document.querySelector('input[name="age"]:checked').value;
+			var state=document.getElementById("stateSelect");
+			var stateValue= state.options[state.selectedIndex].value;
+		
+		   var msg="Your name is: "+name+", age group of: "+age+", and you are from: "+stateValue;
+
+		   var newMsg=document.createElement("li");
+		   newMsg.innerHTML = msg;
+		   message.appendChild(newMsg);
+		   //document.getElementById('userName').value="";
+		
+		}
+		
+	</script>
+</body>
+</html>
