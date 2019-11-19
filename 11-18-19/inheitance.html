@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Chef{
+
+		constructor(name,age){
+
+			this.name=name;
+			this.age=age;
+		}
+		makeChicken(){
+			document.write(this.name + " The chef makes chicken"+"<br>");
+		}
+		makeSalad(){
+			document.write(this.name + " The chef makes Salad"+"<br>");
+		}
+		makeSpecialDish(){
+			document.write(this.name + " The chef makes Burger"+"<br>");
+		}
+
+	}
+
+	class ItalianChef extends Chef{
+
+		constructor(name,age,location){
+
+			super(name,age);
+			this.location=location;
+		}
+		makePasta(){
+
+			document.write(this.name+ " The Chef makes pasta"+"<br>");
+		}
+
+       //overriding 
+		makeSpecialDish(){
+			document.write(this.name + "The Chef makes pizza"+"<br>");
+
+		}
+
+	}
+
+	var myChef= new Chef("swaroop",25);
+	var myItalianChef=new ItalianChef("John",30,"Italy");
+	myChef.makeChicken();
+	myItalianChef.makePasta();
+	myChef.makeSpecialDish();
+	myItalianChef.makeSpecialDish();
+
+</script>
+</body>
+</html>
