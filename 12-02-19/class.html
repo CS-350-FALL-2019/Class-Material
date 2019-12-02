@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="City Name" id="input-city">
+    <button id="submit-btn">Get Weather</button>
+    <div id="div-data">
+
+    </div>
+    <img id="img-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var iconUrl = "";
+           
+            $("#submit-btn").click(function(){
+                var city = $("#input-city").val();
+                $.ajax({
+                    type: "POST",
+                    url: "http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=a37cec0467561d22f52c421d0f1c7aa9&units=imperial",
+                    dataType : "json",
+                    success: function(result, status, xhr){
+                        console.log(result);
+                        let cityName=result.name;
+                        let temp=result.main.temp;
+                        let countyName = result.sys.country;
+                        let icon = result.weather[0].icon;
+                        let iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+                        console.log(icon);
+                        // console.log(temp);
+                        let data=`<p><strong>City Name</strong>: ${cityName}</p>
+                                <p><strong>Temprature</strong>: ${temp}</p>
+                                <p><strong>Coutry Name</strong>: ${countyName}</p>`;
+                        //console.log(data);
+
+                        $("#div-data").html(data);
+                        $("#img-icon").attr('src',iconUrl);
+
+                        //$("#div-data").css("color","red");
+
+
+
+
+                       // var icon = result.weather[0].icon;
+                        //console.log(icon);
+                       // var iconUrl = `http://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`;
+                       // $("#img-icon").attr('src',iconUrl);
+
+                    },
+                    error: function(xhr, status, error){
+                        console.log(error);
+
+                    }
+
+
+                });
+
+            });
+
+          
+
+
+
+        });
+
+    </script>
+</body>
+</html>
